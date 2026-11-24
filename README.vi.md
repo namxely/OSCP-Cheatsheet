@@ -1,8 +1,42 @@
+[English](README.md) | **Tiếng Việt**
+
+<div align="center">
+
 # OSCP Cheatsheet (Sổ tay Lệnh Thực chiến Pentest & OSCP)
 
-> 🌐 **Ngôn ngữ:** [English](README.md) | **Tiếng Việt**
+<p><strong>Tài liệu tra cứu lệnh thực chiến từ rà quét dịch vụ, khai thác Web, leo thang đặc quyền Windows/Linux, pivoting tới tấn công Active Directory.</strong></p>
 
-Tài liệu tra cứu lệnh thực chiến cho kiểm thử xâm nhập (Pentesting) & chứng chỉ OSCP: từ rà quét thu thập thông tin, khai thác ứng dụng Web, leo thang đặc quyền Windows/Linux cho tới tấn công Active Directory.
+<p>
+  <a href="https://github.com/namxely/OSCP-Cheatsheet"><img src="https://img.shields.io/github/stars/namxely/OSCP-Cheatsheet?style=for-the-badge&logo=github&color=yellow" alt="GitHub Stars"></a>
+  <a href="README.md"><img src="https://img.shields.io/badge/Docs-English%20%7C%20Ti%E1%BA%BFng%20Vi%E1%BB%87t-00A86B?style=for-the-badge" alt="Song ngữ Anh-Việt"></a>
+  <img src="https://img.shields.io/badge/Sections-90%2B%20Commands-DC2626?style=for-the-badge" alt="90+ Mục Lệnh">
+  <img src="https://img.shields.io/badge/Focus-AD%20%26%20PrivEsc-3B82F6?style=for-the-badge" alt="Active Directory & PrivEsc">
+  <img src="https://img.shields.io/badge/Curated-2026-FF6B35?style=for-the-badge" alt="Cập nhật 2026">
+</p>
+
+<p>
+  <a href="#tổng-quan--thao-tác-cơ-bản">Cơ bản</a> &nbsp;·&nbsp;
+  <a href="#thu-thập--rà-quét-dịch-vụ-recon--enumeration">Recon</a> &nbsp;·&nbsp;
+  <a href="#tấn-công-ứng-dụng-web">Web</a> &nbsp;·&nbsp;
+  <a href="#khai-thác--reverse-shells">Khai thác</a> &nbsp;·&nbsp;
+  <a href="#leo-thang-đặc-quyền-windows-windows-privilege-escalation">Win PrivEsc</a> &nbsp;·&nbsp;
+  <a href="#leo-thang-đặc-quyền-linux-linux-privilege-escalation">Linux PrivEsc</a> &nbsp;·&nbsp;
+  <a href="#hậu-khai-thác-post-exploitation">Hậu khai thác</a> &nbsp;·&nbsp;
+  <a href="#kiểm-thử-active-directory">Active Directory</a>
+</p>
+
+</div>
+
+> [!NOTE]
+> **Chỉ dùng cho học tập & kiểm thử được cấp phép:** Áp dụng các lệnh này trong môi trường lab hợp pháp (OSCP, Hack The Box, Proving Grounds) hoặc dự án pentest có ủy quyền.
+
+```mermaid
+flowchart LR
+  S1["1. Rà quét (Nmap / SMB / Web)"] --> S2["2. Xâm nhập (Web / Reverse Shell)"]
+  S2 --> S3["3. Leo thang (WinPEAS / LinPEAS / GTFOBins)"]
+  S3 --> S4["4. Hậu khai thác & Pivot (Ligolo-ng / Mimikatz)"]
+  S4 --> S5["5. Active Directory (BloodHound / NetExec / Kerberoast)"]
+```
 
 ## Mục lục
 
@@ -581,3 +615,7 @@ kerberos::golden /user:Administrator /domain:controller.local /sid:<SID> /krbtgt
 - **Kho gốc (Original Repository)**: [0xSojalSec/OSCP-Cheatsheet](https://github.com/0xSojalSec/OSCP-Cheatsheet) (tác giả ban đầu: Sai Sathvik)
 - **Cập nhật & Việt hóa**: Sửa tiêu đề mục lục chuẩn GFM, thay thế liên kết CrackMapExec wiki hỏng bằng NetExec, bổ sung 6 tài liệu pentest mới (HackTricks, PayloadsAllTheThings, LOLBAS, WADComs, Ligolo-ng, NetExec) và biên dịch phiên bản tiếng Việt ([README.md](README.md)).
 - **Giấy phép (License)**: Kho gốc không đính kèm tệp `LICENSE`; toàn bộ nguồn tham khảo và tác giả gốc được giữ nguyên ghi nhận tại đây.
+
+---
+
+Nếu kho tài nguyên này hữu ích cho công việc của bạn, hãy tặng một ⭐ để lưu lại và giúp nhiều người biết đến hơn nhé!

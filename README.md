@@ -1,8 +1,42 @@
-# OSCP Cheatsheet
+**English** | [Tiếng Việt](README.vi.md)
 
-> 🌐 **Languages:** **English** | [Tiếng Việt](README.vi.md)
+<div align="center">
 
-Practical penetration testing & OSCP command reference covering enumeration, web exploitation, Windows/Linux privilege escalation, and Active Directory attacks.
+# OSCP & Penetration Testing Cheatsheet
+
+<p><strong>Practical command reference covering service enumeration, web attacks, Windows/Linux privilege escalation, pivoting, and Active Directory.</strong></p>
+
+<p>
+  <a href="https://github.com/namxely/OSCP-Cheatsheet"><img src="https://img.shields.io/github/stars/namxely/OSCP-Cheatsheet?style=for-the-badge&logo=github&color=yellow" alt="GitHub Stars"></a>
+  <a href="README.vi.md"><img src="https://img.shields.io/badge/Docs-English%20%7C%20Ti%E1%BA%BFng%20Vi%E1%BB%87t-00A86B?style=for-the-badge" alt="Bilingual EN/VI"></a>
+  <img src="https://img.shields.io/badge/Sections-90%2B%20Commands-DC2626?style=for-the-badge" alt="90+ Command Sections">
+  <img src="https://img.shields.io/badge/Focus-AD%20%26%20PrivEsc-3B82F6?style=for-the-badge" alt="Active Directory & PrivEsc">
+  <img src="https://img.shields.io/badge/Curated-2026-FF6B35?style=for-the-badge" alt="Curated 2026">
+</p>
+
+<p>
+  <a href="#general">General</a> &nbsp;·&nbsp;
+  <a href="#recon-and-enumeration">Recon</a> &nbsp;·&nbsp;
+  <a href="#web-attacks">Web Attacks</a> &nbsp;·&nbsp;
+  <a href="#exploitation">Exploitation</a> &nbsp;·&nbsp;
+  <a href="#windows-privilege-escalation">Win PrivEsc</a> &nbsp;·&nbsp;
+  <a href="#linux-privilege-escalation">Linux PrivEsc</a> &nbsp;·&nbsp;
+  <a href="#post-exploitation">Post-Exp</a> &nbsp;·&nbsp;
+  <a href="#active-directory-pentesting">Active Directory</a>
+</p>
+
+</div>
+
+> [!NOTE]
+> **Educational & Authorized Testing Only:** Use these commands strictly in authorized labs (OSCP, Hack The Box, Proving Grounds) or approved penetration tests.
+
+```mermaid
+flowchart LR
+  S1["1. Recon & Enum (Nmap / SMB / Web)"] --> S2["2. Initial Access (Web / Reverse Shell)"]
+  S2 --> S3["3. PrivEsc (WinPEAS / LinPEAS / GTFOBins)"]
+  S3 --> S4["4. Post-Exp & Pivoting (Ligolo-ng / Mimikatz)"]
+  S4 --> S5["5. Active Directory (BloodHound / NetExec / Kerberoast)"]
+```
 
 ## Table of Contents
 - [General](#general)
@@ -1654,4 +1688,8 @@ dir \\<RHOST>\admin$
 - **Source Repository**: [0xSojalSec/OSCP-Cheatsheet](https://github.com/0xSojalSec/OSCP-Cheatsheet) (originally authored by Sai Sathvik)
 - **Curated & Updated**: Fixed broken CrackMapExec wiki link (migrated to NetExec), refreshed Table of Contents, added 5+ verified OSCP/pentesting references, and created Vietnamese translation ([README.vi.md](README.vi.md)).
 - **License**: No upstream `LICENSE` file was included in the original repository; attribution and original credits are preserved above.
+
+---
+
+If you find this curated repository useful, consider giving it a ⭐ to bookmark it and help others discover it!
 
